@@ -1,4 +1,4 @@
-function [mean1, mean2, var1, var2, var3, std1, std2, std3] = p1_stats(x)
+function [mean1, mean2, mean3, var1, var2, var3, std1, std2, std3] = p1_stats(x)
 
 mean1 = 0;
 for i = 1:length(x)
