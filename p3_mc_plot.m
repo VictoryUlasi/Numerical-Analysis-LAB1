@@ -116,7 +116,7 @@ c = figure("Name","N = 10000")
 plot(xhit3,yhit3, 'o', 'LineStyle', 'none', 'MarkerSize', 8, 'LineWidth',1.5);
 hold on
 plot(xmiss3,ymiss3, 'or', 'LineStyle', 'none', 'MarkerSize', 8, 'LineWidth',1.5);
-plot(x3 , fx3, 'ok')
+plot(x3 , fx3, '-k','MarkerSize', 8)
 hold off
 saveas(c, 'p3_N10000', 'png')
 
