@@ -1,8 +1,5 @@
 function [mean1, mean2, var1, var2, var3, std1, std2, std3] = p1_stats(x)
 
-%S = load("lab_data.mat","data");
-%x = S.data;
-
 mean1 = 0;
 for i = 1:length(x)
     mean1 = (mean1 + x(i));
