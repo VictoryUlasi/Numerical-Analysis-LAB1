@@ -102,7 +102,7 @@ hold on
 plot(xmiss1,ymiss1, 'or', 'LineStyle', 'none', 'MarkerSize', 8, 'LineWidth',1.5);
 plot(x1 , fx1, 'ok')
 hold off
-saveas(a, 'p3_N100', 'png')
+saveas(a, 'p3_N100.png')
 
 b = figure("Name","N = 1000")
 plot(xhit2,yhit2, 'o', 'LineStyle', 'none', 'MarkerSize', 8, 'LineWidth',1.5);
@@ -110,7 +110,7 @@ hold on
 plot(xmiss2,ymiss2, 'or', 'LineStyle', 'none', 'MarkerSize', 8, 'LineWidth',1.5);
 plot(x2 , fx2, 'ok')
 hold off
-saveas(b, 'p3_N1000', 'png')
+saveas(b, 'p3_N1000.png')
 
 c = figure("Name","N = 10000")
 plot(xhit3,yhit3, 'o', 'LineStyle', 'none', 'MarkerSize', 8, 'LineWidth',1.5);
@@ -118,6 +118,6 @@ hold on
 plot(xmiss3,ymiss3, 'or', 'LineStyle', 'none', 'MarkerSize', 8, 'LineWidth',1.5);
 plot(x3 , fx3, '-k','MarkerSize', 8)
 hold off
-saveas(c, 'p3_N10000', 'png')
+saveas(c, 'p3_N10000.png')
 
 end
