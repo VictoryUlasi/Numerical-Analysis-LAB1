@@ -2,6 +2,9 @@ function p3_mc_plot()
 
 [I, Nvals, xrand1, yrand1, xrand2, yrand2, xrand3, yrand3] = p2_mc_integral();
 
+xplot = linspace(0,1,600);
+yplot = 1 ./ (1+ xplot.^2);
+
 x1 = xrand1;
 y1 = yrand1;
 N1 = Nvals(1);
@@ -100,24 +103,27 @@ a = figure("Name","N = 100")
 plot(xhit1,yhit1, 'o', 'LineStyle', 'none', 'MarkerSize', 8, 'LineWidth',1.5);
 hold on
 plot(xmiss1,ymiss1, 'or', 'LineStyle', 'none', 'MarkerSize', 8, 'LineWidth',1.5);
-plot(x1 , fx1, 'ok')
+plot(xplot , yplot, 'k','LineWidth', 1.5)
 hold off
+legend('Hit','Miss','f(x)','Location','best')
 saveas(a, 'p3_N100.png')
 
 b = figure("Name","N = 1000")
 plot(xhit2,yhit2, 'o', 'LineStyle', 'none', 'MarkerSize', 8, 'LineWidth',1.5);
 hold on
 plot(xmiss2,ymiss2, 'or', 'LineStyle', 'none', 'MarkerSize', 8, 'LineWidth',1.5);
-plot(x2 , fx2, 'ok')
+plot(xplot , yplot, 'k','LineWidth', 1.5)
 hold off
+legend('Hit','Miss','f(x)','Location','best')
 saveas(b, 'p3_N1000.png')
 
 c = figure("Name","N = 10000")
 plot(xhit3,yhit3, 'o', 'LineStyle', 'none', 'MarkerSize', 8, 'LineWidth',1.5);
 hold on
 plot(xmiss3,ymiss3, 'or', 'LineStyle', 'none', 'MarkerSize', 8, 'LineWidth',1.5);
-plot(x3 , fx3, '-k','MarkerSize', 8)
+plot(xplot , yplot, 'k','LineWidth', 1.5)
 hold off
+legend('Hit','Miss','f(x)','Location','best')
 saveas(c, 'p3_N10000.png')
 
 end
